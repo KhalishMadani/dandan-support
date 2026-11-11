@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>dandan Support</title>
+<style>
+  :root {
+    --bg: #fff8fb;
+    --ink: #1c1c1c;
+    --body: #5a5a5a;
+    --pink: #ff2d8e;
+    --card: #ffffff;
+    --line: #f0dfe7;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #161116;
+      --ink: #f5eef2;
+      --body: #c9bcc4;
+      --pink: #ff5aa5;
+      --card: #201820;
+      --line: #3a2c37;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #161116;
+    --ink: #f5eef2;
+    --body: #c9bcc4;
+    --pink: #ff5aa5;
+    --card: #201820;
+    --line: #3a2c37;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 17px/1.5 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  }
+  main {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 48px 16px 64px;
+  }
+  .brand {
+    color: var(--pink);
+    font-weight: 900;
+    font-size: 34px;
+    letter-spacing: -0.5px;
+    margin: 0 0 8px;
+  }
+  h1 { font-size: 28px; margin: 0 0 8px; }
+  h2 { font-size: 20px; margin: 32px 0 8px; }
+  p, li { color: var(--body); }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 16px;
+  }
+  details {
+    border-top: 1px solid var(--line);
+    padding: 14px 0;
+  }
+  details:first-of-type { border-top: 0; }
+  summary {
+    cursor: pointer;
+    color: var(--ink);
+    font-weight: 600;
+  }
+  details p { margin: 8px 0 0; }
+  a { color: var(--pink); }
+  footer {
+    margin-top: 40px;
+    font-size: 14px;
+    color: var(--body);
+  }
+</style>
+</head>
+<body>
+<main>
+  <p class="brand">dandan.</p>
+  <h1>Support</h1>
+  <p>dandan lets you try on blush, eyebrows and eyeliner live on your own face, then follow a step-by-step tutorial and compare your result side by side.</p>
+
+  <div class="card">
+    <h2 style="margin-top:0">Contact us</h2>
+    <p>Email: <a href="mailto:khalishmadani112@gmail.com">khalishmadani112@gmail.com</a></p>
+    <p>We usually reply within 2 working days.</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+
+  <details>
+    <summary>The camera does not start or the makeup does not show.</summary>
+    <p>Allow camera access in Settings &gt; dandan. dandan needs a front camera with face tracking (a TrueDepth camera, on iPhones with Face ID). Make sure your face is in view, the light is good, and you are facing the phone. dandan does not run in the iOS Simulator or on devices without face tracking.</p>
+  </details>
+
+  <details>
+    <summary>Is my photo saved or shared?</summary>
+    <p>Photos you take in dandan stay in the app's memory while you use the flow and are cleared when you finish. They leave the app only if you share them or save them to your Photos library. dandan asks permission only to add photos to your library.</p>
+  </details>
+
+  <details>
+    <summary>Does dandan need an account or the internet?</summary>
+    <p>No. There is no sign-in, no account, and the app does not connect to a server. Face tracking runs on your device.</p>
+  </details>
+
+  <details>
+    <summary>Can I use dandan in Indonesian?</summary>
+    <p>Yes. dandan follows your iPhone's language. It is available in English and Indonesian (Bahasa Indonesia).</p>
+  </details>
+
+  <details>
+    <summary>How do I restart the tutorial?</summary>
+    <p>On the feedback screen, tap the retake button to go back to the tutorial. Tap Done to return home.</p>
+  </details>
+
+  <details>
+    <summary>How do I delete my data?</summary>
+    <p>dandan stores only its settings (for example, that you have seen the welcome screens) on your device. To remove them, delete the app. Photos saved to your Photos library are yours to manage there.</p>
+  </details>
+
+  <h2>Privacy</h2>
+  <p>Read our <a href="../privacy/">privacy policy</a>.</p>
+
+  <footer>
+    dandan. &middot; <a href="../privacy/">Privacy policy</a>
+  </footer>
+</main>
+</body>
+</html>
