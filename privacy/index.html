@@ -3,115 +3,148 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#FF2D8E">
 <title>dandan Privacy Policy</title>
 <style>
+  /* 60% white / 30% black / 10% pink */
   :root {
-    --bg: #fff8fb;
-    --ink: #1c1c1c;
-    --body: #4f4f4f;
-    --pink: #ff2d8e;
-    --line: #f0dfe7;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --bg: #161116;
-      --ink: #f5eef2;
-      --body: #c9bcc4;
-      --pink: #ff5aa5;
-      --line: #3a2c37;
-    }
-  }
-  :root[data-theme="dark"] {
-    --bg: #161116;
-    --ink: #f5eef2;
-    --body: #c9bcc4;
-    --pink: #ff5aa5;
-    --line: #3a2c37;
+    --white: #FFFFFF;
+    --pink: #FF2D8E;
+    --black: #0A0A0A;
+    --soft: #FFF0F7;
+    --muted: #4a4a4a;
   }
   * { box-sizing: border-box; }
   body {
     margin: 0;
-    background: var(--bg);
-    color: var(--ink);
-    font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    background: var(--white);
+    color: var(--black);
+    font: 17px/1.65 -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
   }
-  main {
-    max-width: 640px;
-    margin: 0 auto;
-    padding: 48px 16px 64px;
+  .hero {
+    background: var(--black);
+    color: var(--white);
+    padding: 40px 16px 72px;
+    border-radius: 0 0 36px 36px;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; }
+  .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 28px;
   }
   .brand {
-    color: var(--pink);
+    background: var(--pink);
+    color: var(--black);
     font-weight: 900;
-    font-size: 34px;
+    font-size: 22px;
     letter-spacing: -0.5px;
-    margin: 0 0 8px;
+    padding: 6px 16px 8px;
+    border-radius: 999px;
   }
-  h1 { font-size: 28px; margin: 0 0 4px; }
-  h2 { font-size: 20px; margin: 32px 0 8px; }
-  p, li { color: var(--body); }
-  ul { padding-left: 20px; }
-  .meta { font-size: 15px; color: var(--body); margin: 0 0 24px; }
-  .summary {
-    border: 1px solid var(--line);
-    border-radius: 16px;
-    padding: 18px 20px;
-    margin: 16px 0 0;
-    color: var(--ink);
-  }
-  a { color: var(--pink); }
   .back {
-    display: inline-block;
-    margin-bottom: 24px;
+    background: var(--black);
+    color: var(--white);
     font-size: 15px;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
+    padding: 8px 16px;
+    border: 2px solid var(--white);
+    border-radius: 999px;
+    transition: transform .12s ease;
   }
+  .back:hover { transform: translateX(-2px); }
+  a:focus-visible { outline: 3px solid var(--pink); outline-offset: 3px; }
+  h1 {
+    font-size: clamp(36px, 9vw, 52px);
+    line-height: 1.05;
+    letter-spacing: -1.5px;
+    font-weight: 900;
+    margin: 0 0 12px;
+  }
+  .meta { margin: 0; font-weight: 600; color: var(--pink); }
+  main { margin-top: -36px; padding: 0 16px 24px; }
+  .summary {
+    background: var(--white);
+    border: 2px solid var(--black);
+    border-radius: 24px;
+    padding: 22px 24px;
+    box-shadow: 6px 6px 0 var(--pink);
+    font-size: 18px;
+  }
+  .summary strong { background: var(--pink); padding: 1px 8px; border-radius: 6px; }
+  h2 {
+    font-size: 22px;
+    letter-spacing: -0.3px;
+    margin: 36px 0 8px;
+    padding-left: 14px;
+    border-left: 6px solid var(--pink);
+    line-height: 1.2;
+  }
+  p { margin: 0 0 12px; color: var(--muted); }
+  a { color: var(--black); font-weight: 600; text-decoration-color: var(--pink); text-decoration-thickness: 2px; text-underline-offset: 3px; }
   footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid var(--line);
+    background: var(--black);
+    color: var(--white);
+    border-radius: 36px 36px 0 0;
+    margin-top: 56px;
+    padding: 28px 16px;
     font-size: 14px;
-    color: var(--body);
   }
+  footer a { color: var(--pink); }
+  footer .wrap { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
 </style>
 </head>
 <body>
-<main>
-  <a class="back" href="../">&larr; Back to Support</a>
-  <p class="brand">dandan.</p>
-  <h1>Privacy Policy</h1>
-  <p class="meta">Effective date: 11 November 2026</p>
-
-  <div class="summary">
-    <strong>In short:</strong> dandan has no account, no advertising, no analytics and no tracking. The app does not connect to a server. Your camera and face data stay on your phone.
+<header class="hero">
+  <div class="wrap">
+    <div class="top">
+      <a class="back" href="../">&larr; Back to Support</a>
+      <div class="brand">dandan<span>.</span></div>
+    </div>
+    <h1>Privacy Policy</h1>
+    <p class="meta">Effective date: 11 November 2026</p>
   </div>
+</header>
 
-  <h2>Camera and face tracking</h2>
-  <p>dandan uses the front camera and ARKit face tracking to show makeup on your face live. This runs on your device in real time. Face data, face meshes and camera frames are not stored, not uploaded, and not used for marketing, advertising or data mining, in line with Apple's App Store Review Guideline 5.1.2(vi).</p>
-  <p>The camera can also photograph a makeup palette so you can pick a colour. That image is not saved or uploaded.</p>
+<main>
+  <div class="wrap">
+    <div class="summary">
+      <strong>In short:</strong> dandan has no account, no advertising, no analytics and no tracking. The app does not connect to a server. Your camera and face data stay on your phone.
+    </div>
 
-  <h2>Photos</h2>
-  <p>Photos you take in the app (the desired look and your result) stay in memory while you use the flow and are cleared when you finish. They leave the app only if you choose to share them or save them to your Photos library. dandan asks for permission only to add photos to your library.</p>
+    <h2>Camera and face tracking</h2>
+    <p>dandan uses the front camera and ARKit face tracking to show makeup on your face live. This runs on your device in real time. Face data, face meshes and camera frames are not stored, not uploaded, and not used for marketing, advertising or data mining, in line with Apple's App Store Review Guideline 5.1.2(vi).</p>
+    <p>The camera can also photograph a makeup palette so you can pick a colour. That image is not saved or uploaded.</p>
 
-  <h2>Data stored on your device</h2>
-  <p>dandan stores only app settings, for example that you have seen the welcome screens, in your device's settings storage (UserDefaults). This is not sent anywhere.</p>
+    <h2>Photos</h2>
+    <p>Photos you take in the app (the desired look and your result) stay in memory while you use the flow and are cleared when you finish. They leave the app only if you choose to share them or save them to your Photos library. dandan asks for permission only to add photos to your library.</p>
 
-  <h2>Third parties</h2>
-  <p>dandan has no third-party analytics, advertising or tracking. The app includes open-source libraries that run on your device.</p>
+    <h2>Data stored on your device</h2>
+    <p>dandan stores only app settings, for example that you have seen the welcome screens, in your device's settings storage (UserDefaults). This is not sent anywhere.</p>
 
-  <h2>Children</h2>
-  <p>dandan does not knowingly collect personal information from anyone, including children.</p>
+    <h2>Third parties</h2>
+    <p>dandan has no third-party analytics, advertising or tracking. The app includes open-source libraries that run on your device.</p>
 
-  <h2>Changes</h2>
-  <p>If this policy changes, we will post the new version on this page and update the effective date.</p>
+    <h2>Children</h2>
+    <p>dandan does not knowingly collect personal information from anyone, including children.</p>
 
-  <h2>Contact</h2>
-  <p>Questions about this policy: <a href="mailto:khalishmadani112@gmail.com">khalishmadani112@gmail.com</a></p>
+    <h2>Changes</h2>
+    <p>If this policy changes, we will post the new version on this page and update the effective date.</p>
 
-  <footer>
-    dandan. &middot; <a href="../">Support</a>
-  </footer>
+    <h2>Contact</h2>
+    <p>Questions about this policy: <a href="mailto:khalishmadani112@gmail.com">khalishmadani112@gmail.com</a></p>
+  </div>
 </main>
+
+<footer>
+  <div class="wrap">
+    <span>dandan.</span>
+    <a href="../">Support</a>
+  </div>
+</footer>
 </body>
 </html>
